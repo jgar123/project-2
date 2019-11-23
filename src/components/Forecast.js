@@ -26,14 +26,14 @@ class Forecast extends React.Component {
   }
 
   render() {
-    return <div className="section">
-      <div className="container">
-        <div className="columns is-multiline">
+    return <div id="forecastSection" className="section">
+      <div className="container hero-body has-bg-img">
+        <div className="columns is-multiline is-centered">
           {this.state.dayForecast.map((elem, i) => {
-            return <div key={i} className="column is-2 has-text-centered">
-              <p className="subtitle">{moment(elem.dt_txt).format('dddd')}</p>
+            return <div id="forecastCard" key={i} className="column is-2 has-text-centered">
+              <p className="subtitle has-text-white">{moment(elem.dt_txt).format('dddd')}</p>
               <img src={`http://openweathermap.org/img/wn/${elem.weather[0].icon}@2x.png`} alt=""/>
-              <p>{elem.main.temp} <small>C</small></p>
+              <p className="has-text-white">{Math.floor(elem.main.temp)} <small>C</small></p>
             </div>
           })}
         </div>

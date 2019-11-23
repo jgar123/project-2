@@ -16,14 +16,12 @@ const App = () => (
     <Navbar />
     <Weather />
     <Switch>
-      <Route exact path="/" component={Articles}/>
-      <Route exact path="/article/:id" component={SingleArticle}/>
-      <Route exact path="/forecast" component={Forecast}/>
+      <Route exact path="/" component={Articles} />
+      <Route exact path="/article/:id" component={SingleArticle} />
+      <Route exact path="/forecast" component={Forecast} />
     </Switch>
-    <div className="footer">
-      <div className="container">
-        <p>Powered by News API</p>
-      </div>
+    <div className="footer" id="foot">
+      <p>Powered by <strong>News API</strong></p>
     </div>
   </BrowserRouter>
 )
