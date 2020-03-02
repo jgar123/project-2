@@ -6,7 +6,6 @@ class Forecast extends React.Component {
   constructor() {
     super()
     this.state = {
-      fullForecast: [],
       dayForecast: []
     }
   }
@@ -18,7 +17,6 @@ class Forecast extends React.Component {
           return day.dt_txt.includes('12:00:00')
         })
         this.setState({ 
-          fullForecast: resp.data.list,
           dayForecast: dayForecast 
         })
       })

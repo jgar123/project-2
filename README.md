@@ -101,4 +101,33 @@ class SingleArticle extends React.Component {
 - We decided we wanted the Weather component to be fixed below the Navigation Bar whilst the 5 day forecast remain a separate part of the website (the 5 day forecast is a separate component called Forecast)
 
 **Forecast**
-- 
+- In order to generate our 5 day forecast, we queried the openWeather API which returns hourly forecasts as opposed to daily ones. In this instance, we decided that we would filter the forecast array where the time was equal to `12:00:00`. This meant we would now have 5 elements in our array and the 5 day forecast would reflect the weather at midday for the proceeding 5 days.
+```js
+  componentDidMount() {
+    axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=London,uk&APPID=${process.env.W_API_KEY}&units=metric`)
+      .then(resp => {
+        const dayForecast = resp.data.list.filter(day => {
+          return day.dt_txt.includes('12:00:00')
+        })
+        this.setState({ dayForecast: dayForecast })
+      })
+      .catch(err => console.log(err))
+  }
+```
+- We then map over the `dayForecast` array in state.
+
+## Screenshots
+![Home screen](screenshots/newsme_home.png)
+![Single article page](screenshots/single_article.png)
+![No news error](screenshots/no_news.png)
+![5 day forecast](screenshots/forecast.png)
+
+## Potential future features
+- Have popular searches based on social media (using Twitter's API for example)
+
+## Bugs
+- When the user refreshes the page on a single article, the page doesn't render anything due to the temporary ID's given to each article. To solve this, we could build a backend to store this ID permanently and call for specific articles. 
+
+
+## Lessons learned
+- Researching the API in more detail is crucial. For instance, the article ID problem could have been solved with a more elegant solution or potentially we could have used an alternative API.
