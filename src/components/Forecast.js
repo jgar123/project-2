@@ -12,7 +12,7 @@ class Forecast extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://api.openweathermap.org/data/2.5/forecast?q=London,uk&APPID=8256de24dbdf6fd7e79723bdc42b4f02&units=metric')
+    axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=London,uk&APPID=${process.env.W_API_KEY}&units=metric`)
       .then(resp => {
         const dayForecast = resp.data.list.filter(day => {
           return day.dt_txt.includes('12:00:00')

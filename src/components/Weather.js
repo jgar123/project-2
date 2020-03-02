@@ -24,7 +24,6 @@ class Weather extends React.Component {
       .catch(err => console.log(err))
   }
 
-
   render() {
     return <section id="weather" className="section">
       <div className="container">
@@ -39,9 +38,6 @@ class Weather extends React.Component {
             <p className="has-text-grey-dark">Humidity: {this.state.weatherAll.main.humidity}%</p>
           </div>
           <Link className="column is-2" to="/forecast" id="forecast-link">5-DAY FORECAST</Link>
-          {/* <div className="column is-2">
-            <Link to="/forecast" id="forecast-link">5-DAY FORECAST</Link>
-          </div> */}
         </div>   
       </div>
     </section>

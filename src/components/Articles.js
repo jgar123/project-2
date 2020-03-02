@@ -43,17 +43,7 @@ class Articles extends React.Component {
         this.setState({ articles: resp.data.articles,
           searchHist: searchHist })
       })
-    console.log(this.state.searchHist)
   }
-
-  // countingCount() {
-  //   let x = this.state.count
-  //   if (this.state.articles.length === 0) {
-  //     x += 1
-  //     this.setState({ count: x })
-  //   }
-  //   return x
-  // }
 
   render() {
     return <section id="section" className="section">

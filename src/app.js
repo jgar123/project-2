@@ -12,7 +12,7 @@ import Weather from './components/Weather'
 import Forecast from './components/Forecast'
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/newsme">
     <Navbar />
     <Weather />
     <Switch>

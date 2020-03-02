@@ -20,7 +20,6 @@ class SingleArticle extends React.Component {
   }
   
   render() {
-    console.log(this.state.singleArticle.source.name)
     return <div className="section has-background-white">
       <div id="singleArticle" className="container is-full-mobile">
         <p className="title">{this.state.singleArticle.title}</p>
