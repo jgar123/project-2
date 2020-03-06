@@ -9,7 +9,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve('dist'),
-    publicPath: '/newsme/'
+    publicPath: '/project-2/'
   },
   module: {
     rules: [
