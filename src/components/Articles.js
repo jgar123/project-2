@@ -90,7 +90,6 @@ class Articles extends React.Component {
           </div>
         </div>
       }
-      <p>{this.countingCount}</p>
     </section>
   }
 }
