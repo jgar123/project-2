@@ -8,6 +8,8 @@ This is my second project of the software engineering immersive course at GA Lon
 
 Making use of News API and OpenWeather API, we created a website that returned most popular articles based on keyword search as well as providing the user a 5 day forecast for London. 
 
+You can find launch the app on github pages [here](https://jgar123.github.io/project-2/).
+
 ## Brief
 - Consume a public API – this could be anything but it must make sense for your project.
 - Have several components - At least one classical and one functional.
